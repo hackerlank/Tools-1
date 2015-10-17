@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\Tools\Tools\bin\Debug\Tools.exe.config
+C:\Users\Administrator\Desktop\Tools\Tools\bin\Debug\Tools.exe
+C:\Users\Administrator\Desktop\Tools\Tools\bin\Debug\Tools.pdb
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.Tools.resources
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.exe
+C:\Users\Administrator\Desktop\Tools\Tools\obj\Debug\Tools.pdb
