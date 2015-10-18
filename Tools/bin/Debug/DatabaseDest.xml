@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Database Name="DichVu_DB">
+    <Server>SERVER-PC</Server>
+    <User>sa</User>
+    <Password>1</Password>
+  </Database>
+</root>

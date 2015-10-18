@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Database Name="georgetown_ThanhTri">
+    <Server>TIENTHANH-PC\SQLEXPRESS</Server>
+    <User>thanhlogin</User>
+    <Password>Thanh1</Password>
+    <TenQuan>huyện Thanh Trì</TenQuan>
+    <DichVu1 MaxID="150">false</DichVu1>
+    <DichVu2 MaxID="250">true</DichVu2>
+    <DichVu3 MaxID="350">true</DichVu3>
+    <ThoiDiemTao>10/8/2015</ThoiDiemTao>
+  </Database>
+  <Database Name="georgetown_TayHo">
+    <Server>TIENTHANH-PC\SQLEXPRESS</Server>
+    <User>sa</User>
+    <Password>1</Password>
+    <TenQuan>quận Tây Hồ</TenQuan>
+    <DichVu1 MaxID="150">false</DichVu1>
+    <DichVu2 MaxID="250">true</DichVu2>
+    <DichVu3 MaxID="350">true</DichVu3>
+    <ThoiDiemTao>10/8/2016</ThoiDiemTao>
+  </Database>
+  <Database Name="georgetown_LongBien">
+    <Server>TIENTHANH-PC\SQLEXPRESS</Server>
+    <User>sa</User>
+    <Password>Thanhid1</Password>
+    <TenQuan>quận Long Biên</TenQuan>
+    <DichVu1 MaxID="150">false</DichVu1>
+    <DichVu2 MaxID="250">true</DichVu2>
+    <DichVu3 MaxID="350">true</DichVu3>
+    <ThoiDiemTao>10/8/2017</ThoiDiemTao>
+  </Database>
+</root>

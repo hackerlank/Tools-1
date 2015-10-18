@@ -14,8 +14,7 @@ namespace Tools
         public string Database { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
-        string connectionstring = "";
-
+        string connectionstring = "";   
         SqlConnection SqlCon;
         SqlCommand SqlCom;
         SqlDataAdapter SqlDta;
@@ -52,9 +51,7 @@ namespace Tools
                 System.Windows.Forms.MessageBox.Show("Lỗi trong Open connection : " + ex.Message);
                 return false;
             }
-        }
-
-
+        } 
         public bool CloseCon()
         {
             try
@@ -99,7 +96,64 @@ namespace Tools
                 return null;
             }
         }
+        public DataSet GetData(string Query)
+        {
+            try
+            {
+                OpenCon();
+                SqlCom = SqlCon.CreateCommand();
+                SqlCom.CommandText = Query;                  
+                DataSet ds = new DataSet();
+                SqlDta = new SqlDataAdapter(SqlCom);
+                SqlDta.Fill(ds);                 
+
+                CloseCon();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                CloseCon();
+                return null;
+            }
+        }
+        public DataSet GetData(string SPName, string[] Paras, string[] Values)
+        {
+            try
+            {
+                if(Paras.Length != Values.Length)
+                {
+                    System.Windows.Forms.MessageBox.Show("Tham số truyền vào không khớp.");
+                    return null;
+                }
+                OpenCon();
+                SqlCom = SqlCon.CreateCommand();
+                SqlCom.CommandType = CommandType.StoredProcedure;
+                SqlCom.CommandText = SPName;
+                if (Paras.Length > 0)
+                {
+                    for (int i = 0; i < Paras.Length; i++)
+                    {
+                        SqlParameter para = new SqlParameter(Paras[i], Values[i]);
+                        SqlCom.Parameters.Add(para);
+                    }
+                }
+
+                DataSet ds = new DataSet();
+                SqlDta = new SqlDataAdapter(SqlCom);
+                SqlDta.Fill(ds);    
+            
+
+                CloseCon();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                CloseCon();
+                return null;
+            }
+        }
+
     }
 }
-//Server=myServerAddress;Database=myDataBase;User Id=myUsername;
-//Password=myPassword;

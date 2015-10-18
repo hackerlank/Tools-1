@@ -45,6 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsDatabase.cs" />
+    <Compile Include="clsXML.cs" />
+    <Compile Include="DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB.Designer.cs">
+      <DependentUpon>DB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DB.resx">
+      <DependentUpon>DB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools.resx">
       <DependentUpon>Tools.cs</DependentUpon>
     </EmbeddedResource>
